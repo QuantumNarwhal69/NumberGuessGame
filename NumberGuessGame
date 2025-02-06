@@ -1,0 +1,17 @@
+const targetNumber = Math.floor(Math.random() * 100) + 1;
+
+function guessNumber() {
+    let guess;
+    do {
+        guess = parseInt(prompt("Guess a number between 1 and 100:"), 10);
+        if (guess < targetNumber) {
+            console.log("Too low!");
+        } else if (guess > targetNumber) {
+            console.log("Too high!");
+        } else {
+            console.log("Correct! You guessed the number.");
+        }
+    } while (guess !== targetNumber);
+}
+
+guessNumber();
